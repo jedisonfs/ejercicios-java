@@ -8,6 +8,7 @@ public class Dia1 {
 
         Scanner sc = new Scanner(System.in);
 
+        int ente = 0;
         int i = 0;
         int ident;
         String nom;
@@ -16,7 +17,7 @@ public class Dia1 {
 //      double[] cal = new double[2];
         double caluno = 0;
         double caldos = 0;
-        double prom=0;        
+        double prom = 0;
 
         System.out.println("                     UNIVERSIDAD SANTO TOMAS            ");
         System.out.print("Digite su no. Identificacion : ");
@@ -40,16 +41,32 @@ public class Dia1 {
             i++;
 
             if ((caluno >= 1) || (caluno <= 5)) {
-                System.out.println("Ingrese segunda calificacion = ");
+                System.out.print("Ingrese segunda calificacion = ");
                 caldos = sc.nextDouble();
             }
         } while ((caluno < 1) || (caluno > 5));
 
-        prom = (caluno + caldos)/2;
-        
+        prom = (caluno + caldos) / 2;
+        ente = (int) prom;
 
-                
-            
+        switch (ente) {
+            case 1:
+                System.out.println("Uno");
+                break;
+            case 2:
+                System.out.println("Dos");
+                break;
+            case 3:
+                System.out.println("Tres");
+                break;
+            case 4:
+                System.out.println("Cuatro");
+                break;
+            case 5:
+                System.out.println("Cinco");
+                break;
+        }
+
     }
 
 }
