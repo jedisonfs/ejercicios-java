@@ -1,12 +1,15 @@
-package dia1;
+
+package dia1.pkg0;
 
 import java.util.Scanner;
 
-public class Dia1 {
+
+public class Dia10 {
+
 
     public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in);
+        
+                Scanner sc = new Scanner(System.in);
 
         int i = 0;
         int ident;
@@ -32,14 +35,14 @@ public class Dia1 {
                 caluno = sc.nextDouble();
 
            if ((caluno <1) || (caluno >5)) {
-                System.out.println("La calificación debe estar entre 1..5"); 
+                System.out.println("La calificaciÃ³n debe estar entre 1..5"); 
             }
         } while (caluno < 1 || caluno > 5);
 
         do {
            
             if (caluno <1 || caluno >5) {
-                System.out.print("La calificación debe estar entre 1..5 ");
+                System.out.print("La calificaciÃ³n debe estar entre 1..5 ");
                 caldos = sc.nextDouble();
             }
         } while (caluno < 1 || caluno > 5);
@@ -67,5 +70,5 @@ public class Dia1 {
         System.out.println("Promedio = "+prom);
 System.exit(0);
     }
-
+    
 }
