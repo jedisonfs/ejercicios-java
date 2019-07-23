@@ -8,7 +8,6 @@ public class Dia1 {
 
         Scanner sc = new Scanner(System.in);
 
-        int ente = 0;
         int i = 0;
         int ident;
         String nom;
@@ -23,33 +22,32 @@ public class Dia1 {
         System.out.print("Digite su no. Identificacion : ");
         ident = sc.nextInt();
         System.out.print("Ingrese su Nombre : ");
-        nom = sc.nextLine();
+        nom = sc.next();
         System.out.print("Ingrese sus apellidos : ");
-        apell = sc.nextLine();
+        apell = sc.next();
         System.out.println("");
 
         do {
-            i++;
-
-            if ((caluno >= 1) || (caluno <= 5)) {
-                System.out.print("Ingrese primera calificacion  = ");
+                System.out.print("Ingrese Primera Calificacion ");
                 caluno = sc.nextDouble();
+
+           if ((caluno <1) || (caluno >5)) {
+                System.out.println("La calificación debe estar entre 1..5"); 
             }
-        } while ((caluno < 1) || (caluno > 5));
+        } while (caluno < 1 || caluno > 5);
 
         do {
-            i++;
-
-            if ((caluno >= 1) || (caluno <= 5)) {
-                System.out.print("Ingrese segunda calificacion = ");
+           
+            if (caluno <1 || caluno >5) {
+                System.out.print("La calificación debe estar entre 1..5 ");
                 caldos = sc.nextDouble();
             }
-        } while ((caluno < 1) || (caluno > 5));
+        } while (caluno < 1 || caluno > 5);
 
-        prom = (caluno + caldos) / 2;
-        ente = (int) prom;
+        prom = (caluno+caldos)/2;
+        
 
-        switch (ente) {
+        switch ((int)prom) {
             case 1:
                 System.out.println("Uno");
                 break;
@@ -66,7 +64,7 @@ public class Dia1 {
                 System.out.println("Cinco");
                 break;
         }
-
+System.exit(0);
     }
 
 }
